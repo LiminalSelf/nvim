@@ -1,7 +1,13 @@
 require("vim._core.ui2").enable({})
 
-require("config.options")
-require("config.keymaps")
-require("config.autocommands")
-require("config.package-manager")
+require("options")
+require("keymaps")
+require("commands")
+require("pack")
+require("treesitter")
+require("lsp")
 
+require("vague").setup({
+    transparent = true
+})
+vim.cmd.colorscheme("vague")
